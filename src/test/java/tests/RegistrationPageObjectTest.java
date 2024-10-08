@@ -16,8 +16,7 @@ public class RegistrationPageObjectTest extends TestBase {
     void fillFormTest() {
         registrationPage.openPage();
         registrationPage.setFirstName("Bony");
-        registrationPage.setLastName("Bony");
-        $("#lastName").setValue("Skye");
+        registrationPage.setLastName("Skye");
         $("#userEmail").setValue("Bony@test.com");
         $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("9659112131");
