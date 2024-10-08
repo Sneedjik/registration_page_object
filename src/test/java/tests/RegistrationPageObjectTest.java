@@ -10,17 +10,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegistrationPageObjectTest {
+public class RegistrationPageObjectTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
-
-
-    @BeforeAll
-    static void testBase() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.pageLoadStrategy = "eager";
-    }
 
     @Test
     void fillFormTest() {
