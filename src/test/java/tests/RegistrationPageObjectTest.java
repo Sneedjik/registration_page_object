@@ -3,18 +3,15 @@ package tests;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
-
 public class RegistrationPageObjectTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     void fillFormTest() {
-        registrationPage.openPage()
+        registrationPage.
+                openPage()
+
                 .setFirstName("Bony")
                 .setLastName("Skye")
                 .setEmail("Bony@test.com")
