@@ -11,6 +11,7 @@ public class RegistrationPageObjectTest extends TestBase {
     void fillFormTest() {
         registrationPage.
                 openPage()
+                .removeBanners()
 
                 .setFirstName("Bony")
                 .setLastName("Skye")
@@ -42,6 +43,7 @@ public class RegistrationPageObjectTest extends TestBase {
     void partlyFillFormTest () {
         registrationPage.
                 openPage()
+                .removeBanners()
 
                 .setFirstName("Bony")
                 .setLastName("Skye")
@@ -58,8 +60,10 @@ public class RegistrationPageObjectTest extends TestBase {
     void negativeFillTest () {
         registrationPage.
                 openPage()
+                .removeBanners()
 
                 .submit()
+
                 .negativeCheck();
     }
 
