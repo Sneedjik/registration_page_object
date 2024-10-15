@@ -13,7 +13,7 @@ public class RegistrationPageObjectTest extends TestBase {
     String gender = "Male";
     String number = "9659112131";
     String badNumber = "j";
-    String dayOfBirth = "007";
+    String dayOfBirth = "07";
     String monthOfBirth = "October";
     String yearOfBirth = "1991";
     String subject = "Maths";
@@ -53,11 +53,11 @@ public class RegistrationPageObjectTest extends TestBase {
                 .checkResult("Hobbies", hobby)
                 .checkResult("Picture", picture)
                 .checkResult("Address", address)
-                .checkResult("State and City", state + " " +city);
+                .checkResult("State and City", state + " " + city);
     }
 
     @Test
-    void partlyFillFormTest () {
+    void partlyFillFormTest() {
         registrationPage.
                 openPage()
                 .removeBanners()
@@ -74,7 +74,7 @@ public class RegistrationPageObjectTest extends TestBase {
     }
 
     @Test
-    void negativeFillTest () {
+    void negativeFillTest() {
         registrationPage.
                 openPage()
                 .removeBanners()

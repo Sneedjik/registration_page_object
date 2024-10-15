@@ -40,35 +40,34 @@ public class RegistrationPage {
             submitButton = $("#submit");
 
 
-
     CalendarComponent calendarComponent = new CalendarComponent();
 
 
-    public RegistrationPage setFirstName (String value) {
+    public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setLastName (String value) {
+    public RegistrationPage setLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setEmail (String value) {
+    public RegistrationPage setEmail(String value) {
         emailInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setGender (String value) {
+    public RegistrationPage setGender(String value) {
         genderWrapper.$(byText(value)).click();
 
         return this;
     }
 
-    public RegistrationPage setUserNumber (String value) {
+    public RegistrationPage setUserNumber(String value) {
         userNumberInput.setValue(value);
 
         return this;
@@ -85,7 +84,7 @@ public class RegistrationPage {
         subjectInput.click();
         subjectInput.setValue(value).pressEnter();
 
-         return this;
+        return this;
     }
 
     public RegistrationPage setHobby(String value) {
