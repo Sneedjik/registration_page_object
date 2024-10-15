@@ -56,8 +56,11 @@ public class RegistrationPageObjectTest extends TestBase {
 
     @Test
     void negativeFillTest () {
-        registrationPage.submit();
+        registrationPage.
+                openPage()
 
+                .submit()
+                .negativeCheck();
     }
 
 }
