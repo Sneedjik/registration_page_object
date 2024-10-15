@@ -62,6 +62,10 @@ public class RegistrationPageObjectTest extends TestBase {
                 openPage()
                 .removeBanners()
 
+                .setFirstName("Bony")
+                .setLastName("Skye")
+                .setGender("Male")
+                .setUserNumber("j")
                 .submit()
 
                 .negativeCheck();
