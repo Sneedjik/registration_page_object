@@ -38,4 +38,26 @@ public class RegistrationPageObjectTest extends TestBase {
                 .checkResult("State and City", "NCR Delhi");
     }
 
+    @Test
+    void partlyFillFormTest () {
+        registrationPage.
+                openPage()
+
+                .setFirstName("Bony")
+                .setLastName("Skye")
+                .setGender("Male")
+                .setUserNumber("9659112131")
+                .submit()
+
+                .checkResult("Student Name", "Bony Skye")
+                .checkResult("Gender", "Male")
+                .checkResult("Mobile", "9659112131");
+    }
+
+    @Test
+    void negativeFillTest () {
+        registrationPage.submit();
+
+    }
+
 }
