@@ -7,36 +7,53 @@ public class RegistrationPageObjectTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
+    String firstName = "Bony";
+    String lastName = "Skye";
+    String email = "Bony@test.com";
+    String gender = "Male";
+    String number = "9659112131";
+    String badNumber = "j";
+    String dayOfBirth = "007";
+    String monthOfBirth = "October";
+    String yearOfBirth = "1991";
+    String subject = "Maths";
+    String hobby = "Reading";
+    String picture = "One-Punch Man.jpg";
+    String address = "Street 1";
+    String state = "NCR";
+    String city = "Delhi";
+
+
     @Test
     void fillFormTest() {
         registrationPage.
                 openPage()
                 .removeBanners()
 
-                .setFirstName("Bony")
-                .setLastName("Skye")
-                .setEmail("Bony@test.com")
-                .setGender("Male")
-                .setUserNumber("9659112131")
-                .setDateOfBirth("007", "October", "1991")
-                .setSubject("Maths")
-                .setHobby("Reading")
-                .setPicture("One-Punch Man.jpg")
-                .setAddress("Street 1")
-                .setState("NCR")
-                .setCity("Delhi")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setEmail(email)
+                .setGender(gender)
+                .setUserNumber(number)
+                .setDateOfBirth(dayOfBirth, monthOfBirth, yearOfBirth)
+                .setSubject(subject)
+                .setHobby(hobby)
+                .setPicture(picture)
+                .setAddress(address)
+                .setState(state)
+                .setCity(city)
                 .submit()
 
-                .checkResult("Student Name", "Bony Skye")
-                .checkResult("Student Email", "Bony@test.com")
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "9659112131")
-                .checkResult("Date of Birth", "07 October,1991")
-                .checkResult("Subjects", "Maths")
-                .checkResult("Hobbies", "Reading")
-                .checkResult("Picture", "One-Punch Man.jpg")
-                .checkResult("Address", "Street 1")
-                .checkResult("State and City", "NCR Delhi");
+                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Student Email", email)
+                .checkResult("Gender", gender)
+                .checkResult("Mobile", number)
+                .checkResult("Date of Birth", dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
+                .checkResult("Subjects", subject)
+                .checkResult("Hobbies", hobby)
+                .checkResult("Picture", picture)
+                .checkResult("Address", address)
+                .checkResult("State and City", state + " " +city);
     }
 
     @Test
@@ -45,15 +62,15 @@ public class RegistrationPageObjectTest extends TestBase {
                 openPage()
                 .removeBanners()
 
-                .setFirstName("Bony")
-                .setLastName("Skye")
-                .setGender("Male")
-                .setUserNumber("9659112131")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setGender(gender)
+                .setUserNumber(number)
                 .submit()
 
-                .checkResult("Student Name", "Bony Skye")
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "9659112131");
+                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Gender", gender)
+                .checkResult("Mobile", number);
     }
 
     @Test
@@ -62,10 +79,10 @@ public class RegistrationPageObjectTest extends TestBase {
                 openPage()
                 .removeBanners()
 
-                .setFirstName("Bony")
-                .setLastName("Skye")
-                .setGender("Male")
-                .setUserNumber("j")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setGender(gender)
+                .setUserNumber(badNumber)
                 .submit()
 
                 .negativeCheck();
