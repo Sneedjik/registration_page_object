@@ -20,7 +20,7 @@ public class RegistrationPageObjectTest extends TestBase {
                 .setUserNumber("9659112131")
                 .setDateOfBirth("007", "October", "1991")
                 .setSubject("Maths")
-                .setHobbie("Reading")
+                .setHobby("Reading")
                 .setPicture("One-Punch Man.jpg")
                 .setAddress("Street 1")
                 .setState("NCR")

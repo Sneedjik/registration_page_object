@@ -88,7 +88,7 @@ public class RegistrationPage {
          return this;
     }
 
-    public RegistrationPage setHobbie(String value) {
+    public RegistrationPage setHobby(String value) {
         hobbiesWrapper.$(byText(value)).click();
 
         return this;
